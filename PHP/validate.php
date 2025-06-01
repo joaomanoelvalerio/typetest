@@ -5,13 +5,12 @@ function verifica_Campo($campo){
   $campo = htmlspecialchars($campo);
   return $campo;
 }
-?>
 
-<?php
-function verifica_Nulo($campo) {
-  if (empty($_POST[$campo])) {
-    return "O campo $campo é obrigatório.";
+function verifica_Nulo($campo, &$existencia) {
+  if (empty($campo)) {
+    $existencia = false;
+    return "Este campo é obrigatório.";
   }
-  return "";
+  return '';
 }
 ?>
