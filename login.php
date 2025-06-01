@@ -22,7 +22,7 @@ $existencia = true;
 
             <div class='camposLogin'>
             <label for="name">Nome</label>
-            <input type="text" name="nome" id="inputName"
+            <input type="text" name="nome" id="inputName" required
                 value="<?php echo isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : ''; ?>">
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -37,7 +37,8 @@ $existencia = true;
 
             <div class='camposLogin'>
             <label for="email">Email</label>
-            <input type="email" name="email" id="inputEmail" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
+            <input type="email" name="email" id="inputEmail" requireds 
+                value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $email = $_POST['email'];
@@ -56,7 +57,7 @@ $existencia = true;
 
             <div class='camposLogin'>
             <label for="password">Senha</label>
-            <input type="password" name="senha" id="inputSenha" value="">
+            <input type="password" name="senha" id="inputSenha" value="" required>
             <?php
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $senha = $_POST['senha'];
