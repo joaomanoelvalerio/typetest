@@ -11,6 +11,6 @@ function verifica_Nulo($campo, &$existencia) {
     $existencia = false;
     return "Este campo é obrigatório.";
   }
-  return '';
+  return true;
 }
 ?>
