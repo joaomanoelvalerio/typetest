@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tahoma';
+
+}
+
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74, 74, 156);
+    background-image: url("starfall.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: fixed;
+    pointer-events: none;
+}
+
+.retangulo {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 20px;
+  width: 480px;
+  min-width: 500px; 
+  max-width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  background: rgba(27, 28, 98, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgb(93, 48, 207);
+  text-align: center;
+}
+
+.retangulo h1 {
+  padding: 20px 100px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: aliceblue;
+  text-shadow: 0 0 8px #66f, 0 0 15px #88f;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  border-radius: 5px;
+  background-image: url("starfall.gif");
+}
+
+#barraPesquisa {
+  transform: translateX(-24%);
+  width: 50%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Tahoma';
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: none;
+  backdrop-filter: blur(5px);
+  box-shadow:
+    inset 0 0 10px rgba(130, 113, 214, 0.4),
+    0 0 10px rgba(67, 97, 238, 0.2);
+  transition: all 0.3s ease;
+}
+
+#barraPesquisa::placeholder {
+  color: rgba(200, 200, 255, 0.5);
+  font-style: italic;
+}
+
+#barraPesquisa:focus {
+  border-color: #a099ee;
+  box-shadow: 0 0 10px #564cc4, inset 0 0 10px #a099ee;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tabela-container {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-family: 'Tahoma';
+  font-size: 1rem;
+}
+
+table thead {
+  background-color: rgba(130, 113, 214, 0.2);
+}
+
+table th, table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+p {  
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  background: linear-gradient(90deg, #b897ff, #7e71f9, #5a65ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255,255,255,0.1);
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+#BotaoVoltar {
+ position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+#BotaoVoltar:hover {
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+#BotaoVoltar:active {
+  transform: translateY(1px);
+}
+
+#botaoBuscar {
+  width: 80px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-align: center;
+  z-index: 1000;
+}
+
+#botaoBuscar:hover {
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+#botaoBuscar:active {
+  transform: translateY(1px);
+}
+
+a {
+  width: 70px;
+  padding: 3px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-align: center;
+  z-index: 1000;
+}
+
+a:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+a:active {
+  transform: translateY(1px);
+}
+
+.paginacao {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Tahoma';
+  color: white;
+  user-select: none;
+}
+
+.paginacao .botaoPagina {
+  display: flex;
+  text-align: center;
+  background: linear-gradient(135deg, #564cc4, #a099ee);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow:
+    0 0 6px rgba(100, 80, 200, 0.7);
+}
+
+.paginacao .botaoPagina:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+
+.mensagem-vazia {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  background: linear-gradient(90deg, #b897ff, #7e71f9, #5a65ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 0px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+table.tabela-clara {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Tahoma;
+  color: white;
+}
+
+table.tabela-clara th, table.tabela-clara td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table.tabela-clara thead {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+table.tabela-clara tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+
+@media (max-height: 800px) {
+  #inputTexto {
+    top: calc(50% + 200px);
+  }
+}
+
+@media (max-height: 700px) {
+  #inputTexto {
+    top: calc(50% + 150px);
+  }
+}
+
+@media (max-height: 600px) {
+  #inputTexto {
+    top: calc(50% + 100px);
+  }
+}

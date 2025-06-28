@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+.retangulo {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  position: relative;  
+  justify-content: flex-start; 
+  text-align: center;
+  width: 90%;
+  max-width: 1400px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(93, 48, 207);
+  background: rgba(27, 28, 98, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 400px; 
+  height: 90vh;
+}
+
+.retangulo h1 {
+    padding: 10px;
+    background-image: url("starfall.gif");
+    border: double 8px rgb(93, 95, 196);
+    border-radius: 0px 15px 0 15px;
+    font-size: 43px;
+    font-weight: bold;
+    font-family: 'Tahoma';
+    margin: 0 auto 30px auto;
+    margin-bottom: 30px;
+    color: aliceblue;
+    
+}
+
+.dadosClassif {
+  margin: 40px 0 0 50px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  margin-bottom: 30px;
+  color: aliceblue;
+  line-height: 2;
+  position: relative; 
+  max-width: 100%;
+  text-align: left;
+  width: 100%;
+  max-width: 700px; 
+}
+
+.container-botoes {
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+  right: 30px; 
+  display: flex;
+  gap: 15px; 
+  flex-wrap: wrap; 
+  justify-content: flex-end;
+  max-width: calc(100% - 60px); 
+}
+
+.container-botoes button {
+  padding: 15px 30px;
+  min-width: 120px;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-botoes button::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, rgba(102, 95, 227, 0.2) 0%, transparent 70%);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.container-botoes button:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+@media (max-width: 600px) {
+  .container-botoes {
+    right: 10px;
+    bottom: 10px;
+    gap: 10px;
+  }
+
+  .container-botoes button {
+    width: 180px;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74, 74, 156);
+    background-image: url("starfall.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+

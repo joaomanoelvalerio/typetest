@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.retangulo {
+margin: 40px auto;
+flex-direction: column;
+align-items: baseline;
+display: flex;
+position: relative;
+justify-content: space-between;
+text-align: center;
+height: 90%;
+width: 90%;
+max-width: 1400px;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 0 20px rgb(93, 48, 207);
+background: rgba(27, 28, 98, 0.4);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.retangulo h1 {
+    padding: 10px;
+    background-image: url("starfall.gif");
+    border: double 8px rgb(93, 95, 196);
+    border-radius: 0px 15px 0 15px;
+    text-align: center;   
+    font-size: 43px;
+    font-weight: bold;
+    font-family: 'Tahoma';
+    margin-left: 70px;
+    margin-bottom: 30px;
+    color: aliceblue;
+    
+}
+table {
+    min-width: 600px;
+    width: 90%;
+    max-width: 1400px;
+    border: solid 3px aliceblue;
+    height: 20%;
+    width: 90%;
+    max-width: 1400px;
+    border-collapse: collapse;
+    background: rgba(27, 28, 98, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+th {
+    padding: 10px;
+    color:aliceblue;
+    font-family: 'Tahoma';
+    font-size: 17px;
+    text-align: left;
+    background-color: rgb(107, 98, 232);
+}
+tr {
+    color:aliceblue;
+    font-family: 'Tahoma';
+    font-size: 17px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+background-color: rgb(25, 21, 75);
+
+}
+
+td {
+    color:rgb(230, 228, 253);
+    font-family: 'Tahoma';
+    font-size: 17px;
+    text-align: left;
+    padding: 7px;
+}
+
+
+#BotaoVoltar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  z-index: 9999;
+}
+
+#BotaoVoltar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(102, 95, 227, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50px;
+  z-index: -1;
+}
+
+#BotaoVoltar:Hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+    
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74, 74, 156);
+    background-image: url("starfall.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.paginacao button {
+  padding: 10px 20px;
+  background: #3a0ca3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(74, 20, 140, 0.5);
+}
+
+.paginacao button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#paginaAtual {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+  .retangulo { padding: 20px 5vw; width: 95%; }
+  .retangulo h1 { font-size: 28px; margin-left: 0; padding: 10px 5vw; }
+  table { width: 95%; left: 0; margin-left: 5vw; font-size: 14px; }
+  th, td, tr { font-size: 14px; padding: 6px; }
+  #BotaoVoltar { width: 90%; margin: 20px auto; display: block; font-size: 16px; }
+}
+

@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Tahoma', sans-serif;
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(74, 74, 156);
+  background-image: url("starfall.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.retangulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(27, 28, 98, 0.4);
+  box-shadow: 0 0 20px rgb(93, 48, 207);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.retangulo h1 {
+   text-align: center;
+    background-image: url("starfall.gif");
+    border-radius: 5px;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 43px;
+    font-weight: bold;
+    font-family: 'Tahoma';
+    margin-bottom: 30px;
+    color: aliceblue;
+    text-shadow: 0 0 8px #66f, 0 0 15px #88f;
+}
+
+.botoes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#BotaoJogarNovamente {
+  position: relative;
+  padding: 15px 30px;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Tahoma';
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+#BotaoJogarNovamente::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(102, 95, 227, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50px;
+  z-index: -1;
+}
+
+#BotaoJogarNovamente:Hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+    
+}
+
+#BotaoClassificacao {
+  margin-top: 25px;
+  position: relative;
+  padding: 15px 30px;
+  width: 300px;
+  font-family: 'Tahoma';
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+#BotaoClassificacao::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(102, 95, 227, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50px;
+  z-index: -1;
+}
+
+#BotaoClassificacao:Hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+    
+}
+
+#BotaoSair {
+  position: relative;
+  padding: 15px 30px;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Tahoma';
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+#BotaoSair::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(102, 95, 227, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50px;
+  z-index: -1;
+}
+
+#BotaoSair:Hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+    
+}
+
+#texto{
+    gap: 10px;
+    font-size: 22px;
+    font-family: 'Tahoma';
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:rgb(130, 113, 214);
+}
+
+
+@media screen and (min-width: 769px) {
+  .retangulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(27, 28, 98, 0.4);
+  box-shadow: 0 0 20px rgb(93, 48, 207);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  }
+
+  .retangulo h1 {
+    text-align: center;
+    background-image: url("starfall.gif");
+    border-radius: 5px;
+    padding: 20px 50px;
+    font-size: 43px;
+    font-weight: bold;
+    font-family: 'Tahoma';
+    margin-bottom: 30px;
+    color: aliceblue;
+    text-shadow: 0 0 8px #66f, 0 0 15px #88f;
+  }
+
+  .botoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  background: linear-gradient(90deg, #b897ff, #7e71f9, #5a65ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255,255,255,0.1);
+}

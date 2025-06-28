@@ -1,0 +1,54 @@
+{
+  "paragrafos": [
+    {
+      "id": 1,
+      "texto": "E sabido que a eletrodinamica de Maxwell — tal como e usualmente compreendida atualmente — leva, em sua aplicacao a corpos em movimento, a assimetrias que nao parecem inerentes aos fenomenos. Pense-se, por exemplo, na interacao eletrodinamica entre um ima e um condutor.",
+      "autor": "Albert Einstein"
+    },
+    {
+      "id": 2,
+      "texto": "Quando todas as fontes termonucleares de energia estiverem esgotadas, uma estrela suficientemente massiva colapsara. A menos que a fissao devido a rotacao, a radiacao de massa ou a ejecao de massa pela radiacao reduzam a massa da estrela para algo da ordem da massa do Sol, essa contracao continuara indefinidamente.",
+      "autor": "J. Robert Oppenheimer"
+    },
+    {
+      "id": 3,
+      "texto": "Normalmente, rascunhos iniciais nao sao feitos nem apropriados para publicacao. Este relatorio e uma excecao.",
+      "autor": "John von Neumann"
+    },
+    {
+      "id": 4,
+      "texto": "A ideia deste trabalho e propor um modelo simples de um dispositivo que manipula simbolos em uma fita de acordo com uma tabela de regras. O dispositivo e uma maquina logica e o artigo formaliza a nocao de procedimento efetivo ou algoritmo.",
+      "autor": "Alan Turing"
+    },
+    {
+      "id": 5,
+      "texto": "Sabe-se que, por meio de certos aparelhos, a corrente eletrica pode ser transmitida pelo ar, e a energia pode ser transferida sem fios. Este sistema baseia-se no principio da ressonancia de circuitos sintonizados, permitindo a transmissao eficiente de energia eletrica atraves do espaco.",
+      "autor": "Nikola Tesla"
+    },
+    {
+      "id": 6,
+      "texto": "Todo corpo persevera em seu estado de repouso ou de movimento uniforme em linha reta, a menos que forcas externas atuem sobre ele.",
+      "autor": "Isaac Newton"
+    },
+    {
+      "id": 7,
+      "texto": "No curso de experimentos com raios de uranio, constatou-se que a substancia emitia radiacao espontaneamente, uma propriedade inerente a propria substancia, que nao podia ser explicada por nenhuma influencia externa.",
+      "autor": "Marie Curie"
+    },
+    {
+      "id": 8,
+      "texto": "Os objetos que vemos sao sombras da verdadeira realidade, que consiste em Formas eternas e imutaveis. O conhecimento vem de recordar essas Formas alem do mundo sensorial.",
+      "autor": "Platao"
+    },
+    {
+      "id": 9,
+      "texto": "Quando voce eliminou o impossivel, o que resta, por mais improvavel que seja, deve ser a verdade.",
+      "autor": "Sherlock Holmes (Arthur Conan Doyle)"
+    },
+    {
+      "id": 10,
+      "texto": "Uma teoria cientifica deve ser capaz de prever eventos futuros. O sucesso da fisica na previsao dos movimentos dos planetas e das particulas subatomicas mostra que estamos no caminho certo. Contudo, ainda precisamos encontrar uma teoria que una a gravidade e a mecanica quantica.",
+      "autor": "Stephen Hawking"
+    }
+  ]
+}

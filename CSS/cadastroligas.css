@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tahoma';
+
+}
+
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(74, 74, 156);
+    background-image: url("starfall.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: fixed;
+    pointer-events: none;
+}
+
+.retangulo {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 20px;
+  width: 480px;
+  min-width: 500px; 
+  max-width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  background: rgba(27, 28, 98, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgb(93, 48, 207);
+  text-align: center;
+}
+
+.retangulo h1 {
+  padding: 20px 100px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: aliceblue;
+  text-shadow: 0 0 8px #66f, 0 0 15px #88f;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  border-radius: 5px;
+  background-image: url("starfall.gif");
+}
+
+#barraPesquisa {
+  position: fixed;
+  bottom: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: 'Tahoma';
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: none;
+  backdrop-filter: blur(5px);
+  box-shadow:
+    inset 0 0 10px rgba(130, 113, 214, 0.4),
+    0 0 10px rgba(67, 97, 238, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#barraPesquisa::placeholder {
+  color: rgba(200, 200, 255, 0.5);
+  font-style: italic;
+}
+
+#barraPesquisa:focus {
+  border-color: #a099ee;
+  box-shadow: 0 0 10px #564cc4, inset 0 0 10px #a099ee;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+p {  
+  position: fixed;
+  bottom: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Tahoma';
+  background: linear-gradient(90deg, #b897ff, #7e71f9, #5a65ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 5px rgba(255,255,255,0.1);
+  text-align: center;
+  z-index: 1000;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+.camposCadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.camposCadastro label {
+  margin-bottom: 6px;
+  color: white;
+  font-family: 'Tahoma';
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.camposCadastro input {
+  width: 100%;
+  padding: 12px 60px;
+  font-size: 1rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: none;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(130, 113, 214, 0.4), 0 0 10px rgba(67, 97, 238, 0.2);
+  transition: all 0.3s ease;
+}
+
+.camposCadastro input::placeholder {
+  color: rgba(200, 200, 255, 0.5);
+}
+
+.camposCadastro input:focus {
+  border-color: #a099ee;
+  box-shadow: 0 0 10px #564cc4, inset 0 0 10px #a099ee;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.Botoes {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  bottom: 20px;
+  
+
+}
+
+#BotaoCadastrar {
+  width: 140px;
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+#BotaoCadastrar:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+#BotaoCadastrar:active {
+  transform: translateY(1px);
+}
+
+#BotaoVoltar {
+  width: 140px;
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3a0ca3 0%, #564cc4 50%, #a099ee 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(74, 20, 140, 0.5),
+    0 0 20px rgb(8, 21, 79),
+    inset 0 0 10px rgb(90, 74, 194);
+  transition: all 0.3s ease;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+#BotaoVoltar:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 15px rgba(74, 20, 140, 0.7),
+    0 0 25px rgba(67, 97, 238, 0.5),
+    inset 0 0 15px rgba(76, 201, 240, 0.6);
+}
+
+#BotaoVoltar:active {
+  transform: translateY(1px);
+}
+
+
+@media (max-height: 800px) {
+  #inputTexto {
+    top: calc(50% + 200px);
+  }
+}
+
+@media (max-height: 700px) {
+  #inputTexto {
+    top: calc(50% + 150px);
+  }
+}
+
+@media (max-height: 600px) {
+  #inputTexto {
+    top: calc(50% + 100px);
+  }
+}
+
